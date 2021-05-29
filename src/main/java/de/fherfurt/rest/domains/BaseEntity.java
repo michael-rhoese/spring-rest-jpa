@@ -7,8 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@MappedSuperclass
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,6 +15,6 @@ import javax.persistence.*;
 public abstract class BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 }

@@ -20,6 +20,7 @@ package de.fherfurt.rest.storages;
 
 import de.fherfurt.rest.domains.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
  * <h2>AddressRepository</h2>
@@ -29,6 +30,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Michael Rhöse
  * @version 0.0.0.0, 05/02/2021
  */
+@RepositoryRestResource(collectionResourceRel = "addresses", path = "addresses")
 public interface AddressRepository extends JpaRepository<Address, Long> {
 
 }
